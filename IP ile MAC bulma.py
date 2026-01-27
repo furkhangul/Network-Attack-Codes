@@ -1,4 +1,4 @@
-def Tarayici(ip):
+def MacBulucu(ip):
     res_packet = scapy.ARP(pdst=ip)
     view_packet = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     fake_packet = view_packet / res_packet
@@ -9,7 +9,7 @@ def Tarayici(ip):
     else:
         print(packet[0][1].hwsrc)
 
-Tarayici("192.168.1.5")
+MacBulucu("192.168.1.5")
 
 
 """
